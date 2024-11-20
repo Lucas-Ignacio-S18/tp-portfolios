@@ -6,70 +6,108 @@
 }
 /*----HEADER/MENU----*/
 header{
-    height: 8vh;
-    padding-left: 50vh;
+    /* border: black, 10px , solid; */
+    height: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    
 
-
-    /* background-color: aqua; */
+    background-color: rgb(233, 241, 253);
 }
 header a{
     /* background-color: beige; */
+    /* border: black, 10px , solid; */
     color: black;
     text-decoration: none;
-    font-size: 30px;
-    margin-top: 200px;
-    margin-right: 2vh;
-    padding-right: 30px;
+    font-size: 35px;
+    margin-left: 50px;
+
+    
 }
+header a:hover{
+    text-decoration: underline;
+    color: rgb(105, 105, 248);
+}
+
+body{
+    /* border: black, 10px , solid; */
+
+    padding: 0 12vh 20vh 25vh;
+    background-color: rgb(233, 241, 253);
+}
+
 
 section{
-    height: 30vh;
-    background-color: antiquewhite;
-    padding-left: 10vh;
+    /* border: black, 10px , solid; */
+    margin-top: 60px;
 }
+
 /*----HERO----*/
 .hero{
-    border: black, 10px , solid;
-
+    /* border: black, 10px , solid; */
     display: flex;
-    flex-direction:column;
-    padding: 80px 100px 200px 100px;
+    flex-direction: column;
+    width: 150vh;
 }
 
 .titulo{
     /* border: black, 10px , solid; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .titulo h1{
-    border: black, 10px , solid;
-    height: 40vh;
-    width: 64vh;
+    /* border: black, 10px , solid; */
+    width: 70vh;
     display: flex;
     align-items: center;
-    font-size: 8vh;
-    margin-right: 8vh;
-}
-
-.descripcion{
-    margin-top: 20px;
-    justify-content: center;
+    font-size: 80px;
+    margin-top: 150px;
+    
 }
 
 .titulo img{
+    /* border: black, 10px , solid; */
     height: 35vh;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+
+/* -----------DESCRIPCION y BOTON---------------*/
+.descripcion{
+
+    /* border: black, 10px , solid; */
+
 }
 .descripcion p{
     /* border: black, 10px , solid; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
 }
 .descripcion button{
-    align-items: baseline;
+    color: white;
+    background-color: rgb(105, 105, 248);
+    
+    margin-top: 40px;
+    font-size: 20px;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 5px;
+}
+.descripcion button:hover{
+    background-color: rgb(89, 89, 220);
+    box-shadow: black;
 }
 
+
+/* -------------------SUBTITULOS -------------------*/
+.subtitulos{
+    font-size: 50px;
+}
