@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Tiny5&display=swap');
 
+.colorsecundario{
+    color: rgb(105, 105, 248);
+}
+
 *{
     padding: 0;
     margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* ----------HEADER---------- */
 header{
@@ -13,7 +18,7 @@ header{
     align-items: center;
     
 
-    background-color: rgb(233, 241, 253);
+    background-color: rgb(237, 237, 237);
 }
 
 /*----------MENU---------- */
@@ -49,14 +54,17 @@ body{
     /* border: black, 10px , solid; */
 
     padding: 0 12vh 20vh 25vh;
-    background-color: rgb(233, 241, 254);
+    background-color: rgb(237, 237, 237);
 }
 
 section{
     /* border: black, 10px , solid; */
     margin-top: 60px;
 }
-
+p{
+    font-size: 30px;
+    color: rgb(34, 34, 34);
+}
 /*----HERO----*/
 .hero{
     /* border: black, 10px , solid; */
@@ -73,11 +81,14 @@ section{
 }
 .titulo h1{
     /* border: black, 10px , solid; */
-    width: 70vh;
-    display: flex;
+    width: 80vh;
     align-items: center;
     font-size: 80px;
     margin-top: 150px;
+}
+.titulo h1 span{
+    /* border: black, 10px , solid; */
+    font-size: 80px;
     
 }
 
@@ -123,4 +134,9 @@ button:hover{
 /* -------------------SUBTITULOS -------------------*/
 .subtitulos{
     font-size: 50px;
+}
+
+.about{
+    /* border: black, 10px , solid; */
+    margin-bottom: 20px;
 }
