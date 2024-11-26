@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Tiny5&display=swap');
 
+*{
+    padding: 0;
+    margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 html {
     scroll-behavior: smooth;
@@ -11,9 +16,7 @@ nav {
     top: 0; /*Esto sirve para cuando deslice, este pegado al borde(top)de la pagina*/
     padding-left: 35vh;
     padding-bottom: 5px;
-
-    background-color: rgb(237, 237, 237);
-    
+    background-color: rgb(250, 252, 255);
     z-index: 1000; /*Esto permite que no sea tapado por otros elementos*/
     display: flex;
     gap: 6px; /*Esto sepra a los elementos secundarios*/
@@ -22,6 +25,7 @@ nav {
 
 
 section {
+    /* border: black, 10px , solid; */
     padding-top: 70px; /* Espacio para evitar que el menú cubra el contenido */
     margin-top: -70px; /* Corrige la posición del ancla */
 }
@@ -32,11 +36,6 @@ section {
     color: rgb(105, 105, 248);
 }
 
-*{
-    padding: 0;
-    margin:0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 /* ----------HEADER---------- */
 header{
     /* border: black, 10px , solid; */
@@ -45,7 +44,7 @@ header{
     justify-content: end;
     align-items: center;
     
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(250, 252, 255);
 }
 
 /*----------MENU---------- */
@@ -86,9 +85,9 @@ header a:hover::after {
 /*---------- BODY ----------*/
 body{
     /* border: black, 10px , solid; */
-
     padding: 0 12vh 20vh 25vh;
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(250, 252, 255);
+
 }
 
 section{
@@ -99,7 +98,7 @@ p{
     font-size: 30px;
     color: rgb(34, 34, 34);
 }
-/*----HERO----*/
+/* HERO ---> Titulo  ---> Imagen ---> Descripcion*/
 .hero{
     /* border: black, 10px , solid; */
     display: flex;
@@ -143,14 +142,6 @@ p{
     
 }
 
-
-/* -----------DESCRIPCION Y BOTONES---------------*/
-
-/* .descripcion{
-
-    border: black, 10px , solid;
-} */
-
 .descripcion p{
     /* border: black, 10px , solid; */
     display: flex;
@@ -158,8 +149,23 @@ p{
     align-items: center;
     font-size: 30px;
     margin-bottom: 20px;
+}
+
+
+
+
+/* elementos secundarios H2.(subtitulos) ||   </Fin de la seccion>  ||  BOTONES  */
+
+/*----------H2/Subtitulos----------*/
+.subtitulos{
+    font-size: 50px;
+    padding-top: 40PX;
+    padding-bottom: 60PX;
     
 }
+
+
+/*----------BOTONES---------- */
 button{
     color: white;
     background-color: rgb(105, 105, 248);
@@ -169,23 +175,30 @@ button{
     padding: 25px 50px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    
 }
+/* efecto de botones */
 button:hover{
     background-color: rgb(89, 89, 220);
     box-shadow: black;
+    
+}
+
+/*----------</FINAL DE SECCION>----------*/
+.findeseccion{
+    /* border: black, 10px , solid; */
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+    color: rgb(110, 110, 110);
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 
-/* -------------------SUBTITULOS -------------------*/
-.subtitulos{
-    font-size: 50px;
-    padding-top: 40PX;
-    padding-bottom: 60PX;
-}
-
-/*       SECCION ABOUT       */
-
-.about{
+/*----------SECCION Sobre mi----------*/
+.sobremi{
     /* border: black, 10px , solid; */
     margin-bottom: 20px;
 }
@@ -197,21 +210,9 @@ button:hover{
 }
 
 
-/* SKILLS */
 
-/* .skills{
-    border: black, 10px , solid;
-} */
-
-/* .skilltitulo{
-    border: black, 10px , solid;
-    
-    
-} */
-
-
-
-.skills img{
+/* ----------SECCION HABILIDADES---------- */
+.habilidades img{
     /* border: black, 10px , solid; */
     box-shadow: 5px 20px 40px rgba(0, 0, 0, 0.5); /*Eje X, Y, Desenfoque*/
     border-radius: 80px;
@@ -223,13 +224,46 @@ button:hover{
 
 
 
-/*             </FINAL DE SECCION>             */
-.findeseccion{
+/*----------MI PORTFOLIO----------*/
+
+/* Contenedor */
+.cartas{
     /* border: black, 10px , solid; */
-    font-size: 40px;
-    display: flex;
-    justify-content: end;
-    color: rgb(110, 110, 110);
-    padding-top: 80px;
-    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas, 1 fracción igual del espacio disponible en el contenedor.*/
+    gap: 150px;  /*Espacio entre cartas */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
+
+/* Estilo de las cartas */
+.carta {
+    /* border: black, 10px , solid; */
+    display: flex;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    padding: 105px;
+}
+
+.carta:hover {
+    box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/*    contenido de la carta    */
+.contetcarta h2 {
+    /* border: black, 10px , solid; */
+    margin: 0 0 50px 0;
+    font-size: 20px;
+}
+
+.contetcarta p {
+    margin: 0;
+    color:rgb(83, 83, 83);
+    font-size: 15px;
+}
+
