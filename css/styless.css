@@ -20,16 +20,14 @@ nav {
     /* border: black, 10px , solid; */
     position: fixed;
     top: 0; /*Esto sirve para cuando deslice, este pegado al borde(top)de la pagina*/
-    padding-right: 30px;
+    padding-right: 50px;
     padding-left: 55vh;
     padding-bottom: 10px;
     background-color: rgb(250, 252, 255);
     z-index: 1000; /*Esto permite que no sea tapado por otros elementos*/
     display: flex;
     gap: 6px; /*Esto sepra a los elementos secundarios*/
-    
 }
-
 
 section{
     /* border: rgb(10, 187, 169), 10px , solid; */
