@@ -25,7 +25,7 @@ body{
     /* border: black, 10px , solid; */
     /* padding: 0 12vh 20vh 25vh; */
     /* background-color: rgb(250, 252, 255); */
-    background-image: url(/img/fondolineas.jpg);
+    background-image: url(img/fondolineas.jpg);
     background-size: cover; /* Cubre toda la pantalla */
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
