@@ -24,9 +24,8 @@ html, body {
 body{
     background-image: url('../img/fondolineas.jpg');
     background-size: cover; /* Cubre toda la pantalla */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100vh; 
+    width: 100%; 
     
 }
 
@@ -51,7 +50,7 @@ section{
     /* border: rgb(10, 187, 169), 10px , solid; */
     padding: 0 12vh 10vh 25vh;
     padding-top: 70px; /* Espacio para evitar que el menú cubra el contenido */
-    margin-top: -70px; /* Corrige la posición del ancla */
+    margin-top: -70px; /* corrige la posición del ancla */
     
 }
 p{
@@ -85,7 +84,7 @@ header a {
     text-decoration: none;
     font-size: 25px;
     margin-left: 30px;
-    transition: color 0.3s ease-in-out; /* Transicion para el cambio de color */
+    transition: color 0.3s;
     
 }
 
@@ -98,7 +97,7 @@ header a::after {
     height: 2px;
     background-color: rgb(105, 105, 248);
 /* Suaviza el cambio de ancho */
-    transition: width 0.3s ease-in-out; 
+    transition: width 0.3s; 
 }
 
 header a:hover::after {
@@ -123,21 +122,18 @@ header a:hover::after {
     display: flex;
     flex-direction: column; 
     
-    text-decoration: none; /* Elimina el subrayado */
+    text-decoration: none; 
     align-items: center;
     gap: 45px; /* Espacio entre iconos */
     padding: 10px;
 
-    top: 60%; /* Centrado verticalmente */
-    left: 100px; /* Al borde izquierdo */
+    top: 60%; 
+    left: 100px; 
     
     position:absolute; /* Fixed: Fijo para que esté al borde || Abosulte, fijo*/
     transform: translateY(-50%); /* Ajuste para centrar completamente */
 
-
     }
-
-
 
 /* Estilo de los iconos */
 
@@ -162,7 +158,7 @@ header a:hover::after {
     transform: scale(1.2); 
 }
 .icon-column a {
-    text-decoration: none; /* Elimina la línea debajo de los enlaces */
+    text-decoration: none; 
 }
 
 
@@ -242,9 +238,9 @@ header a:hover::after {
     margin-right: 60px; /* Separación del borde derecho */
     height: 60vh;
 
-    transform: translateY(-50%); /* Ajuste para centrar completamente */
-    writing-mode: vertical-rl; /* El texto se lee de arriba hacia abajo */
-    transform: rotate(180deg); /* Opcional: Si necesitas invertir el sentido */
+    transform: translateY(-50%); 
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
 }
 .vertical-mail p{
     /* border: black, 10px , solid; */
@@ -343,10 +339,6 @@ button:hover{
 
 
 /*----------MI PORTFOLIO----------*/
-
-/* contenedor de cartas 
-    cartas -> Encabezado(iconos) y contenido(Tecnologias y descripcion)
-*/
 
 /* Contenedor abuelo */
     .contenedordecartas{
