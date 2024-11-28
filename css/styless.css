@@ -351,156 +351,93 @@ button:hover{
     cartas -> Encabezado(iconos) y contenido(Tecnologias y descripcion)
 */
 
-
 /* Contenedor abuelo */
     .contenedordecartas{
     /* border: black, 10px , solid; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     /*Espacio entre las cartas*/
     gap: 100px; 
     height: 80vh;
     padding: 16px;
     margin: 20px 40px;
+    
     }
 
-    /* Contenedor Padre */
-    .cartas {
+/* Contenedor Padre */
+    .cartas{
     /* border: black, 10px , solid; */
     width: 60vh; /*ancho de c/u carta */
     background: rgb(255, 255, 255);
     border-radius: 8px;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
     
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     cursor: pointer;
     }
+
     .cartas:hover {
         transform: scale(1.1);
         transition: transform 0.4s;
         box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
         
     }
-
-
+/*Parte superior de la carta*/
     .encabezado {
         /* border: black, 10px , solid; */
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 16px;
+        
     }
 
-    .encabezado .icons a {
+    .encabezado i{
+        font-size: 38px;
+        color:rgb(89, 89, 220);
+    }
+
+    .encabezado .icons a{
     margin-left: 8px;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 38px;
+    padding-left:8px;
     }
 
-    
+    /*cuerpo de la carta*/
+    .contenido{
+        margin-left: 5px;
+        /* border: rgb(212, 30, 30), 10px , solid; */
+    }
     .contenido h2 {
-    font-size: 20px;
+    font-size: 45px;
     margin: 8px 0;
     }
-
     .contenido p {
-    font-size: 14px;
+    font-size: 25px;
     color:rgb(83, 83, 83);
     }
 
 
-/*TECNOLOGIAS*/
+/*Tecnologias - Parte inferior de la cartas*/
 
     .tecnologias{
-        /* border: black, 10px , solid; */
-    margin-top: 16px;
+    /* border: black, 10px , solid; */
+    margin-top: auto;
     }
-
     .tecnologias span{
     display: inline-block;
     background-color: rgb(227, 227, 227);
     color: rgb(38, 38, 38);
     border-radius: 4px;
     padding: 4px 8px;
-    font-size: 12px;
-    margin: 4px 4px ;
+    font-size: 20px;
+    margin: 6px 6px ;
     }
 
     /*ICONOS*/
-    .icon-folder::before {
-    content: "📁";
-    font-size: 24px;
-    }
 
-    .icono-github::before {
-    content: "🐈";
-    }
-
-    .icon-external-link::before {
-    content: "🔗";
-    }
-
-
-
-/* Contenedor MIO */
-.cartas{
-    /* border: black, 10px , solid; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas, 1 fracción igual del espacio disponible en el contenedor.*/
-    gap: 150px;  /*Espacio entre cartas */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-}
-
-/* Estilo de las cartas */
-.carta {
-    /* border: black, 10px , solid; */
-    display: flex;
-    text-decoration: none;
-    color: black;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    /* overflow: hidden; */
-    transition: box-shadow 0.3s ease;
-    padding: 105px;
-}
-
-.carta:hover {
-    box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-
-/*    contenido de la carta    */
-.contetcarta h2 {
-    /* border: black, 10px , solid; */
-    margin: 0 0 50px 0;
-    font-size: 20px;
-}
-
-.contetcarta{
-    /* border: black, 10px , solid; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.contetcarta p {
-    margin: 0;
-    color:rgb(83, 83, 83);
-    font-size: 15px;
-}
-
-
-    .icon-folder::before {
-    content: "📁";
-    font-size: 24px;
-    }
-
-    .icon-github::before {
-    content: "🐙"; 
-    }
-
-    .icon-external-link::before {
-    content: "🔗"; 
-    }
