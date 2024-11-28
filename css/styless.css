@@ -13,20 +13,41 @@
 html {
     scroll-behavior: smooth;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Necesario para que la imagen ocupe todo el viewport */
+}
 
 
+/*---------- BODY ----------*/
+body{
+    /* border: black, 10px , solid; */
+    /* padding: 0 12vh 20vh 25vh; */
+    /* background-color: rgb(250, 252, 255); */
+    background-image: url(/img/fondolineas.jpg);
+    background-size: cover; /* Cubre toda la pantalla */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    
+}
 
 nav {
     /* border: black, 10px , solid; */
-    position: fixed;
-    top: 0; /*Esto sirve para cuando deslice, este pegado al borde(top)de la pagina*/
-    padding-right: 50px;
-    padding-left: 55vh;
-    padding-bottom: 10px;
     background-color: rgb(250, 252, 255);
-    z-index: 1000; /*Esto permite que no sea tapado por otros elementos*/
     display: flex;
+    
+    position: fixed;
+    
+    
+    padding-right: 50px;
+    padding-left: 57vh;
+    padding-bottom: 10px;
+
+    top: 0; /*Esto sirve para cuando deslice, este pegado al borde(top)de la pagina*/
     gap: 6px; /*Esto sepra a los elementos secundarios*/
+    z-index: 1000; /*Esto permite que no sea tapado por otros elementos*/
 }
 
 section{
@@ -34,6 +55,7 @@ section{
     padding: 0 12vh 10vh 25vh;
     padding-top: 70px; /* Espacio para evitar que el menú cubra el contenido */
     margin-top: -70px; /* Corrige la posición del ancla */
+    
 }
 p{
     font-size: 30px;
@@ -44,14 +66,15 @@ p{
 /* ----------HEADER---------- */
 header{
     /* border: black, 10px , solid; */
-    height: 10vh;
+    height: 40px;
     display: flex;
     justify-content: end;
     align-items: center;
 
+    margin-bottom: 50px;
     padding-right: 35px;
     padding-bottom: 40px;
-    background-color: rgb(250, 252, 255);
+    /* background-color: rgb(250, 252, 255); */
 }
 
 header a {
@@ -83,16 +106,6 @@ header a::after {
 
 header a:hover::after {
     width: 55%;
-}
-
-
-
-/*---------- BODY ----------*/
-body{
-    /* border: black, 10px , solid; */
-    /* padding: 0 12vh 20vh 25vh; */
-    background-color: rgb(250, 252, 255);
-
 }
 
 
@@ -305,7 +318,6 @@ button:hover{
 }
 
 
-
 /*----------SECCION Sobre mi----------*/
 .sobremi{
     /* border: black, 10px , solid; */
@@ -335,7 +347,104 @@ button:hover{
 
 /*----------MI PORTFOLIO----------*/
 
-/* Contenedor */
+/* contenedor de cartas 
+    cartas -> Encabezado(iconos) y contenido(Tecnologias y descripcion)
+*/
+
+
+/* Contenedor abuelo */
+    .contenedordecartas{
+    /* border: black, 10px , solid; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /*Espacio entre las cartas*/
+    gap: 100px; 
+    height: 80vh;
+    padding: 16px;
+    margin: 20px 40px;
+    }
+
+    /* Contenedor Padre */
+    .cartas {
+    /* border: black, 10px , solid; */
+    width: 60vh; /*ancho de c/u carta */
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 16px;
+    
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    }
+    .cartas:hover {
+        transform: scale(1.1);
+        transition: transform 0.4s;
+        box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
+        
+    }
+
+
+    .encabezado {
+        /* border: black, 10px , solid; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .encabezado .icons a {
+    margin-left: 8px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    }
+
+    
+    .contenido h2 {
+    font-size: 20px;
+    margin: 8px 0;
+    }
+
+    .contenido p {
+    font-size: 14px;
+    color:rgb(83, 83, 83);
+    }
+
+
+/*TECNOLOGIAS*/
+
+    .tecnologias{
+        /* border: black, 10px , solid; */
+    margin-top: 16px;
+    }
+
+    .tecnologias span{
+    display: inline-block;
+    background-color: rgb(227, 227, 227);
+    color: rgb(38, 38, 38);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 4px 4px ;
+    }
+
+    /*ICONOS*/
+    .icon-folder::before {
+    content: "📁";
+    font-size: 24px;
+    }
+
+    .icono-github::before {
+    content: "🐈";
+    }
+
+    .icon-external-link::before {
+    content: "🔗";
+    }
+
+
+
+/* Contenedor MIO */
 .cartas{
     /* border: black, 10px , solid; */
     display: grid;
@@ -370,9 +479,28 @@ button:hover{
     font-size: 20px;
 }
 
+.contetcarta{
+    /* border: black, 10px , solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .contetcarta p {
     margin: 0;
     color:rgb(83, 83, 83);
     font-size: 15px;
 }
 
+
+    .icon-folder::before {
+    content: "📁";
+    font-size: 24px;
+    }
+
+    .icon-github::before {
+    content: "🐙"; 
+    }
+
+    .icon-external-link::before {
+    content: "🔗"; 
+    }
