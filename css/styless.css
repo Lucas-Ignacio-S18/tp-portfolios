@@ -22,7 +22,7 @@ html, body {
 
 /*---------- BODY ----------*/
 body{
-    background-image: url(/img/fondolineas.jpg);
+    background-image: url('../img/fondolineas.jpg');
     background-size: cover; /* Cubre toda la pantalla */
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
