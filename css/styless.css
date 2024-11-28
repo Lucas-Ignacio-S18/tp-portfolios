@@ -111,37 +111,53 @@ body{
 /* Diseño general */
     .icon-column {
     /* border: black, 10px , solid; */
-    position:absolute; /* Fixed: Fijo para que esté al borde || Abosulte, fijo*/
-    top: 48%; /* Centrado verticalmente */
-    left: 90px; /* Al borde izquierdo */
-    transform: translateY(-50%); /* Ajuste para centrar completamente */
+
     display: flex;
-    flex-direction: column; /* Columna */
-    gap: 30px; /* Espacio entre iconos */
+    flex-direction: column; 
+    
+    text-decoration: none; /* Elimina el subrayado */
+    align-items: center;
+    gap: 45px; /* Espacio entre iconos */
     padding: 10px;
+
+    top: 60%; /* Centrado verticalmente */
+    left: 100px; /* Al borde izquierdo */
+    
+    position:absolute; /* Fixed: Fijo para que esté al borde || Abosulte, fijo*/
+    transform: translateY(-50%); /* Ajuste para centrar completamente */
+
 
     }
 
+
+
 /* Estilo de los iconos */
-    .icon {
-    text-decoration: none; /* Sin subrayado */
-    font-size: 25px; /* Tamaño del icono */
+
+
+.icon {
+    font-size: 35px; /* Tamaño del icono */
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Redondeado */
+    
+    text-decoration: none; 
     color: rgb(105, 105, 248);
-    transition: background-color 0.3s, transform 0.3s;
-    }
+    transition: transform 0.3s;
+    
+    cursor: pointer;
+    
+}
 
 /* Efectos al pasar el mouse */
-    .icon:hover {
-    background-color: rgb(105, 105, 248); /* Cambia el fondo */
-    color: #fff; /* Cambia el color del texto */
-    transform: scale(1.1); /* Agranda ligeramente */
-    }
+.icon:hover {
+    transform: scale(1.2); 
+}
+.icon-column a {
+    text-decoration: none; /* Elimina la línea debajo de los enlaces */
+}
+
+
 
 /* Titulo */
 .titulo{
@@ -152,41 +168,54 @@ body{
 }
 .titulo h1{
     /* border: black, 10px , solid; */
-    width: 100vh;
+    /* width: 100vh; */
     align-items: center;
     font-size: 100px;
     margin-top: 150px;
 }
-.titulo h1 span{
-    /* border: black, 10px , solid; */
-    font-size: 80px;
-
-}
-
 .titulo img{
     /* border: black, 10px , solid; */
-    height: 35vh;
+    height: 37vh;
     margin-left: 60px;
     margin-bottom: 40px;
     margin-right: 20vh;
-
-    padding-top:20px;
-    padding-right: 20px;
-
-    border-top: 8px solid rgb(105, 105, 248);
-    border-right: 8px solid rgb(105, 105, 248);
-    border-width: 6px;
-    border-radius: 5px;
+    margin-top:20px;
     
+    padding-right: 20px; /*esto es para el marquito azul de la foto*/
+    padding-top: 20px;
+
 }
 
+.borde {
+    position: absolute;
+    height: 38%;  /* Borde ocupa el 70% del alto */
+    top: 16%;     /* Centramos el borde */
+    right: 15%;
+    border: 3px solid rgb(105, 105, 248); /* Estilo del borde */
+    box-sizing: border-box;  /* Aseguramos que las dimensiones incluyan el borde */
+}
+.bordetop{
+    position: absolute;
+    width: 18%; 
+    top: 16%;     /* Centramos el borde */
+    right: 15%;
+    border: 3px solid rgb(105, 105, 248); /* Estilo del borde */
+    box-sizing: border-box;  /* Aseguramos que las dimensiones incluyan el borde */
+}
+
+
+.descripcion{
+    /* border: black, 10px , solid; */
+    margin-top: 60px;
+    width: 145vh;
+    
+}
 .descripcion p{
     /* border: black, 10px , solid; */
-
-    display: flex;
+    
     flex-wrap: wrap;
     align-items: center;
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -195,18 +224,39 @@ body{
 /* Mail vertical */
 .vertical-mail {
     /* border: black, 10px , solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position:absolute; /* Fixed: Fijo para que esté al borde || Abosulte, fijo*/
+
     top: 28%; /* Centrado verticalmente */
-    right: 15px; /* Al borde izquierdo */
+    right: 15px; /* borde derecho */
+    margin-right: 60px; /* Separación del borde derecho */
+    height: 60vh;
+
     transform: translateY(-50%); /* Ajuste para centrar completamente */
     writing-mode: vertical-rl; /* El texto se lee de arriba hacia abajo */
-    margin-right: 60px; /* Separación del borde derecho */
     transform: rotate(180deg); /* Opcional: Si necesitas invertir el sentido */
 }
 .vertical-mail p{
-    /* background-color: #007bff; */
+    /* border: black, 10px , solid; */
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 500;
+
+    padding-bottom: 15px;
+
+    font-size: 20px;
     color: rgb(105, 105, 248);
-    font-size: 25px;
+    
+}
+
+.linea{
+    padding-top: 50px;
+    /* border: black, 10px , solid; */
+    width: 3px;       /* Longitud de la línea */
+    height: 100px;       /* Grosor de la línea */
+    background-color: rgb(105, 105, 248); /* Color de la línea */
+    margin-right: 10px; /* Espacio entre la línea y el párrafo */
 }
 
 
